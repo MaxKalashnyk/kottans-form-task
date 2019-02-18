@@ -24,12 +24,24 @@ body {
 
 .header {
     padding: 4em 0;
+    @include mediaQuery(600) {
+        padding: 3em 0;
+    }
 }
 
 .header-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include mediaQuery(600) {
+        flex-direction: column;
+    }
+}
+
+@include mediaQuery(600) {
+    .logo-link {
+        order: -1;
+    }
 }
 
 /* main content */
@@ -45,9 +57,10 @@ body {
 .order-section {
     display: flex;
     border-bottom: 2px solid $borderColor;
+    @include mediaQuery(992) {
+        flex-direction: column;
+    }
 }
-
-/* order-section main section */
 
 .order-section__main {
     flex: 1 1 70%;
@@ -55,6 +68,16 @@ body {
     justify-content: space-between;
     padding: 2em 3em;
     border-right: 2px solid $borderColor;
+    @include mediaQuery(1200) {
+        padding: 2em;
+    }
+    @include mediaQuery(992) {
+        border-right: none;
+        border-bottom: 2px solid $borderColor;
+    }
+    @include mediaQuery(768) {
+        flex-direction: column;
+    }
 }
 
 .order-section__title {
@@ -90,6 +113,9 @@ body {
 
 .order-section__contactslist {
     display: flex;
+    @include mediaQuery(1200) {
+        flex-direction: column;
+    }
 }
 
 .order-items-count {
@@ -131,11 +157,24 @@ body {
     .standard-button {
         margin-bottom: 1em;
     }
+    @include mediaQuery(768) {
+        flex-direction: row;
+        .standard-button {
+            margin-bottom: 0;
+            margin-right: 1em;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 .order-section-table {
     flex-grow: 2;
     padding: 0 4em;
+    @include mediaQuery(768) {
+        margin-bottom: 2em;
+    }
 }
 
 .order-items-row {
@@ -191,6 +230,10 @@ body {
     display: flex;
     justify-content: space-around;
     margin-right: -3%;
+    @include mediaQuery(600) {
+        flex-direction: column;
+        margin-right: 0;
+    }
 }
 
 .translate-type-img-wrap {
@@ -224,6 +267,11 @@ body {
     height: 250px;
     border-radius: $borderRadius;
     border: 1px solid $borderColor;
+    @include mediaQuery(600) {
+        flex: 1 1 100%;
+        margin-right: 0;
+        margin-bottom: 2em;
+    }
 }
 
 .translate-type-input:checked + .translate-type-img-wrap {
@@ -691,7 +739,7 @@ body {
     width: 20px;
     height: 20px;
     position: absolute;
-    bottom: 12px;
+    bottom: 15px;
     right: 12px;
     opacity: 0;
     visibility: hidden;
@@ -874,15 +922,29 @@ body {
     background-color: $footerColor;
     color: $footerText;
     padding: 6em 0;
+    @include mediaQuery(600) {
+        padding: 4em 0;
+    }
 }
 
 .footer-row {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .footer-item {
     flex: 1 1 25%;
     padding: 0 3em;
+    @include mediaQuery(992) {
+        flex: 1 1 50%;
+        margin-bottom: 2em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @include mediaQuery(600) {
+        flex: 1 1 100%;
+    }
 }
 
 .footer-item__title {
