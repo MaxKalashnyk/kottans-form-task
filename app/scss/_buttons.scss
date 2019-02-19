@@ -29,16 +29,26 @@
     background-repeat: no-repeat;
     padding-left: 2em;
     background-size: 15px;
+    @include mediaQuery(600) {
+        background-position: 40px center;
+    }
 }
 
 .standard-button-back {
     background-color: $greyMain;
     background-image: url("#{$imagePath}/left-arrow-key.svg");
+    @include mediaQuery(600) {
+        order: 2;
+    }
 }
 
 .standard-button-signin {
     background-color: $greyMain;
     background-image: url("#{$imagePath}/profile.svg");
+    @include mediaQuery(600) {
+        margin-bottom: 1em;
+        order: 1;
+    }
 }
 
 .remove-button {
