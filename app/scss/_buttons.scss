@@ -15,6 +15,12 @@
     &:hover {
         opacity: 0.8;
     }
+    &:-moz-focusring {
+        outline: 1px dotted;
+    }
+    &:focus {
+        outline: -webkit-focus-ring-color auto 5px;
+    }
 }
 
 .standard-button-blue {
@@ -51,6 +57,27 @@
     }
 }
 
+.add-button {
+    width: 10em;
+    padding: 1.5em 0 1.5em 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: $blocksGrey;
+    border: 1px solid $borderColor;
+    border-radius: $borderRadius;
+    color: $lightGrey;
+    letter-spacing: 0.5px;
+    @include transition(opacity);
+    background-image: url(#{$imagePath}/add-plus-button.svg);
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 36px center;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
 .remove-button {
     width: 1.5em;
     height: 1.5em;
@@ -60,4 +87,9 @@
     &:hover {
         opacity: 0.8;
     }
+}
+
+button[type="button"]:-moz-focusring,
+button[type="submit"]:-moz-focusring {
+    outline: 1px dotted;
 }

@@ -316,6 +316,13 @@ body {
     }
 }
 
+.translate-type-input:focus + .translate-type-img-wrap {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+.translate-type-input:-moz-focusring + .translate-type-img-wrap {
+    outline: 1px dotted;
+}
+
 .translate-type-img-thumb {
     margin: 0 auto;
 }
@@ -379,10 +386,6 @@ body {
     }
 }
 
-.file-upload-input:focus + .file-label {
-    opacity: 0.8;
-}
-
 .file-label {
     cursor: pointer;
     border: 1px solid $borderColor;
@@ -400,6 +403,15 @@ body {
     &:hover {
         opacity: 0.8;
     }
+}
+
+.file-upload-input:focus + .file-label {
+    opacity: 0.8;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.file-upload-input:-moz-focusring + .file-label {
+    outline: 1px dotted;
 }
 
 .uploaded-files-wrap {
@@ -598,27 +610,6 @@ body {
     }
 }
 
-.add-button {
-    width: 10em;
-    padding: 1.5em 0 1.5em 1em;
-    text-transform: uppercase;
-    font-weight: 700;
-    background-color: $blocksGrey;
-    border: 1px solid $borderColor;
-    border-radius: $borderRadius;
-    color: $lightGrey;
-    letter-spacing: 0.5px;
-    @include transition(opacity);
-    background-image: url(#{$imagePath}/add-plus-button.svg);
-    background-position: 20px center;
-    background-repeat: no-repeat;
-    background-size: 1em;
-    background-position: 36px center;
-    &:hover {
-        opacity: 0.8;
-    }
-}
-
 /* tone section */
 
 .section-row {
@@ -696,6 +687,14 @@ body {
     }
 }
 
+.tone-item-radio-input:focus + .tone-item-text-wrap {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.tone-item-radio-input:-moz-focusring + .tone-item-text-wrap {
+    outline: 1px dotted;
+}
+
 /* urgency section */
 
 .urgency-section {
@@ -728,6 +727,7 @@ body {
 
 .urgency-range-input:focus::-webkit-slider-runnable-track {
     background: $greyMain;
+    outline: -webkit-focus-ring-color auto 5px;
 }
 
 .urgency-range-input::-moz-range-track {
@@ -762,6 +762,7 @@ body {
 }
 .urgency-range-input:focus::-ms-fill-upper {
     background: $greyMain;
+    outline: -webkit-focus-ring-color auto 5px;
 }
 
 .urgency-range-input {
@@ -986,6 +987,14 @@ body {
     }
 }
 
+.payment-input:focus + .payment-item-thumb-wrap {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.payment-input:-moz-focusring + .payment-item-thumb-wrap {
+    outline: 1px dotted;
+}
+
 .payment-item-thumb-wrap {
     position: absolute;
     top: 0;
@@ -1129,6 +1138,14 @@ body {
 .agree-checkbox:checked + .agree-checkbox-label {
     background: url("#{$imagePath}/checkbox.svg") center no-repeat;
     background-size: 100%;
+}
+
+.agree-checkbox:focus + .agree-checkbox-label {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.agree-checkbox:-moz-focusring + .agree-checkbox-label {
+    outline: 1px dotted;
 }
 
 .submit-section-row {
