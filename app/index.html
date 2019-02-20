@@ -31,8 +31,8 @@
         <header class="header">
             <div class="container">
                 <div class="header-row">
-                    <a href="" class="standard-button standard-button-back"
-                        >go back</a
+                    <button class="standard-button standard-button-back"
+                        ><span>go back</span></button
                     >
                     <a href="" class="logo-link">
                         <figure>
@@ -40,7 +40,7 @@
                         </figure>
                     </a>
                     <button class="standard-button standard-button-signin">
-                        sign in
+                        <span>sign in</span>
                     </button>
                 </div>
             </div>
@@ -48,10 +48,10 @@
 
         <main class="main">
             <div class="container">
-                <section class="main-section">
-                    <section class="order-section">
+                <div class="main-section">
+                    <div class="order-section">
                         <section class="order-section__main">
-                            <div class="order-section-table">
+                            <div class="order-section-table" role="table">
                                 <h3
                                     class="order-section__title order-section__title-order"
                                 >
@@ -108,10 +108,10 @@
                                 <button
                                     class="standard-button standard-button-blue"
                                 >
-                                    place order
+                                    <span>place order</span> 
                                 </button>
                                 <button class="standard-button">
-                                    print a quote
+                                    <span>print a quote</span>
                                 </button>
                             </div>
                         </section>
@@ -121,13 +121,11 @@
                             >
                                 help center
                             </h3>
-                            <div class="order-section__textitem">
-                                <p class="order-section-subitem">
-                                    Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing elit. Nemo ex ab, pariatur harum
-                                    fugit, architecto totam.
-                                </p>
-                            </div>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Nemo ex ab, pariatur harum
+                                fugit, architecto totam.
+                            </p> 
                             <ul class="order-section__contactslist">
                                 <li class="order-contactslist-listitem">
                                     <a
@@ -145,7 +143,7 @@
                                 </li>
                             </ul>
                         </section>
-                    </section>
+                    </div>
                     <section class="main-form-section">
                         <div class="form-container">
                             <form action="POST" class="main-form">
@@ -228,7 +226,7 @@
                                         </label>
                                     </section>
                                 </section>
-                                <section class="steps-main-section">
+                                <div class="steps-main-section">
                                     <section class="steps-main-section__upload">
                                         <h2
                                             class="steps-main-section__title"
@@ -357,19 +355,19 @@
                                                             value="0"
                                                             disabled
                                                         ></option>
-                                                        <option value="1"
+                                                        <option value="English"
                                                             >English</option
                                                         >
-                                                        <option value="2"
+                                                        <option value="Spanish"
                                                             >Spanish</option
                                                         >
-                                                        <option value="3"
+                                                        <option value="German"
                                                             >German</option
                                                         >
-                                                        <option value="4"
+                                                        <option value="Chinese"
                                                             >Chinese</option
                                                         >
-                                                        <option value="5"
+                                                        <option value="Arabic"
                                                             >Arabic</option
                                                         >
                                                     </select>
@@ -390,23 +388,23 @@
                                                         class="select-item"
                                                         required
                                                     >
-                                                        <option
+                                                         <option
                                                             value="0"
                                                             disabled
                                                         ></option>
-                                                        <option value="1"
+                                                        <option value="English"
                                                             >English</option
                                                         >
-                                                        <option value="2"
+                                                        <option value="Spanish"
                                                             >Spanish</option
                                                         >
-                                                        <option value="3"
+                                                        <option value="German"
                                                             >German</option
                                                         >
-                                                        <option value="4"
+                                                        <option value="Chinese"
                                                             >Chinese</option
                                                         >
-                                                        <option value="5"
+                                                        <option value="Arabic"
                                                             >Arabic</option
                                                         >
                                                     </select>
@@ -421,23 +419,23 @@
                                                         id="lang-pair-selected-0"
                                                         class="select-item"
                                                     >
-                                                        <option
+                                                       <option
                                                             value="0"
                                                             disabled
                                                         ></option>
-                                                        <option value="1"
-                                                            >Kurdish</option
+                                                        <option value="English"
+                                                            >English</option
                                                         >
-                                                        <option value="2"
+                                                        <option value="Spanish"
                                                             >Spanish</option
                                                         >
-                                                        <option value="3"
+                                                        <option value="German"
                                                             >German</option
                                                         >
-                                                        <option value="4"
+                                                        <option value="Chinese"
                                                             >Chinese</option
                                                         >
-                                                        <option value="5"
+                                                        <option value="Arabic"
                                                             >Arabic</option
                                                         >
                                                     </select>
@@ -454,7 +452,7 @@
                                                     type="button"
                                                     class="add-button"
                                                 >
-                                                    add
+                                                    <span>add</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -566,7 +564,7 @@
 
                                             <!-- <input type="range" id="urgency-range-input"> -->
                                             <div class="info-block">
-                                                <h4 class="info-block__title">
+                                                <h2 class="info-block__title">
                                                     timeline info
                                                 </h4>
                                                 <p class="info-block__text">
@@ -596,7 +594,6 @@
                                             <a
                                                 href="#"
                                                 class="text-link text-link-sign"
-                                                role="button"
                                                 >Sign in</a
                                             >
                                         </p>
@@ -610,9 +607,10 @@
                                                 type="text"
                                                 id="full-name-input"
                                                 class="form-text-input"
-                                                title="Write some text. Min lenght 4"
+                                                title="The lenght of the name should contain minimum 4 characters"
                                                 minlength="4"
                                                 maxlength="20"
+                                                placeholder="Full name"
                                                 required
                                             />
                                             <span
@@ -735,6 +733,7 @@
                                                         type="text"
                                                         id="card-number-input"
                                                         class="form-text-input card-number-input"
+                                                        title="Enter your card number"
                                                         pattern="[0-9 ]{15,19}"
                                                         minlength="15"
                                                         maxlength="19"
@@ -757,7 +756,10 @@
                                                         type="text"
                                                         id="expiration-input"
                                                         class="form-text-input"
-                                                        placeholder="DD/MM/YY"
+                                                        placeholder="MM/YY"
+                                                        title="Enter expiration date of your card in format MM/YY"
+                                                        pattern="([0-9]{2}[/]?){2}"
+                                                        inputmode="numeric"
                                                         required
                                                     />
                                                     <span
@@ -787,7 +789,7 @@
                                             </div>
                                         </div>
                                     </section>
-                                </section>
+                                </div>
                                 <section class="submit-section">
                                     <div class="submit-section__item">
                                         <p class="submit-section-row">
@@ -813,20 +815,20 @@
                                             type="submit"
                                             class="standard-button standard-button-blue"
                                         >
-                                            place order
+                                            <span>place order</span>
                                         </button>
                                         <button
                                             type="button"
                                             class="standard-button"
                                         >
-                                            print a quote
+                                        <span>print a quote</span>
                                         </button>
                                     </div>
                                 </section>
                             </form>
                         </div>
-                    </section>
-                </section>
+                    
+                </div>
             </div>
         </main>
 
@@ -834,9 +836,9 @@
             <div class="container">
                 <div class="footer-row">
                     <div class="footer-item">
-                        <h4 class="footer-item__title footer-item__title-heart">
+                        <p class="footer-item__title footer-item__title-heart">
                             what we do
-                        </h4>
+                        </p>
                         <section class="footer-item__text">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Odit eum quia vitae, labore, tenetur vero enim
@@ -844,74 +846,73 @@
                         </section>
                     </div>
                     <div class="footer-item">
-                        <h4
+                        <p
                             class="footer-item__title footer-item__title-compass"
                         >
                             our main office
-                        </h4>
+                        </p>
+                        <address class="footer-item__address">
+                            Dubai, UAE<br>
+                            P.O. Box: 502735 <br
+                            >
+                            <a
+                                href="tel:971044278128"
+                                class="footer-item-contacts__link"
+                                >+971 (0) 44278128</a
+                            >
+                        </address>
+                    </div>
+                    <div class="footer-item">
+                        <p
+                            class="footer-item__title footer-item__title-connect"
+                        >
+                            connect with us
+                        </p>
                         <ul class="footer-item__list">
-                            <li class="footer-item-contacts">Dubai, UAE</li>
                             <li class="footer-item-contacts">
-                                P.O. Box: 502735
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="footer-item-contacts__link"
+                                    ><span
+                                        class="footer-item-contacts__socials footer-item-contacts__socials-facebook"
+                                    ></span>Facebook</a
+                                >
                             </li>
                             <li class="footer-item-contacts">
                                 <a
-                                    href="tel:971044278128"
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener"
                                     class="footer-item-contacts__link"
-                                    >+971 (0) 44278128</a
+                                    ><span
+                                        class="footer-item-contacts__socials footer-item-contacts__socials-twitter"
+                                    ></span>Twitter</a
+                                >
+                            </li>
+                            <li class="footer-item-contacts">
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="footer-item-contacts__link"
+                                    ><span
+                                        class="footer-item-contacts__socials footer-item-contacts__socials-linkedin"
+                                    ></span>Linkedin</a
                                 >
                             </li>
                         </ul>
                     </div>
                     <div class="footer-item">
-                        <h4
-                            class="footer-item__title footer-item__title-connect"
-                        >
-                            connect with us
-                        </h4>
-                        <ul class="footer-item__list">
-                            <li class="footer-item-contacts">
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noopener"
-                                    class="footer-item-contacts-link"
-                                    ><span
-                                        class="footer-item-contacts__socials footer-item-contacts__socials-facebook"
-                                    ></span></a
-                                ><span>Facebook</span>
-                            </li>
-                            <li class="footer-item-contacts">
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noopener"
-                                    class="footer-item-contacts-link"
-                                    ><span
-                                        class="footer-item-contacts__socials footer-item-contacts__socials-twitter"
-                                    ></span></a
-                                ><span>Twitter</span>
-                            </li>
-                            <li class="footer-item-contacts">
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noopener"
-                                    class="footer-item-contacts-link"
-                                    ><span
-                                        class="footer-item-contacts__socials footer-item-contacts__socials-linkedin"
-                                    ></span></a
-                                ><span>Linkedin</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-item">
-                        <figure>
-                            <img
-                                src="./img/logo-footer.png"
-                                alt="logo-footer"
-                            />
-                        </figure>
+                        <a href="#">
+                            <figure>
+                                <img
+                                    src="./img/logo-footer.png"
+                                    alt="logo-footer"
+                                />
+                            </figure>
+                        </a>
                     </div>
                 </div>
             </div>

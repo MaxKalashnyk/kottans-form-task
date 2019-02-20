@@ -160,7 +160,9 @@ body {
     color: $text;
     font-weight: 600;
     @include transition(color);
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
         color: $blueColor;
     }
 }
@@ -1193,6 +1195,7 @@ body {
     text-transform: uppercase;
     margin-bottom: 1.5em;
     position: relative;
+    font-weight: 600;
     &:before {
         content: "";
         width: 1.5em;
@@ -1224,8 +1227,11 @@ body {
     }
 }
 
+.footer-item__address {
+    font-style: normal;
+}
 .footer-item-contacts {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     display: flex;
     &:last-child {
         margin-bottom: 0;
@@ -1233,10 +1239,14 @@ body {
 }
 
 .footer-item-contacts__link {
+    display: flex;
     color: $footerText;
-    @include transition(color);
-    &:hover {
+    @include transition(all);
+    &:hover,
+    &:focus,
+    &:active {
         color: #fff;
+        opacity: 0.8;
     }
 }
 
@@ -1244,18 +1254,10 @@ body {
     display: inline-block;
     width: 1.5em;
     height: 1.5em;
+    margin-right: 1em;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-.footer-item-contacts-link {
-    display: inline-block;
-    margin-right: 1.5em;
-    @include transition(opacity);
-    &:hover {
-        opacity: 0.8;
-    }
 }
 
 .footer-item-contacts__socials-facebook {
